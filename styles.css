@@ -1,0 +1,435 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background: #ededed;
+    color: #222;
+}
+.main-header {
+    width: 100%;
+    background: #fff;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0;
+}
+.logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 5%;
+}
+.logo > img {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    object-fit:contain ;
+    border-radius: 50%;
+}
+.nav-links {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-start;
+}
+.nav-links li a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.nav-icons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.nav-icons > img {
+    overflow: visible;
+    object-fit:contain ;
+    display: block;
+}
+.icon-user, .icon-cart {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+.hero {
+    background-image: url(assets/mercedes-benz_l.webp);
+    position: relative;
+    width: 100%;
+    min-height: 800px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 2rem;
+}
+.hero-text {
+    padding: 5%;
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    align-items: flex-start;
+}
+.hero-text h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 700;
+}
+.hero-text p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+.hero-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+.models-section {
+    padding: 2rem 1rem;
+}
+
+.models-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.model-card {
+    background: #d9d9d9;
+    border-radius: 1.5rem;
+    padding: 2rem 1rem 1rem 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.model-card h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.model-card p {
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+}
+
+.model-image {
+    width: 90%;
+    height: 280px;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.model-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.info_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.description_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding-left: 15%;
+}
+
+.color-options {
+    display: flex;
+    gap: 0.7rem;
+    padding-left: 5%;
+}
+
+.color-input {
+    display: none;
+}
+.color {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid transparent; /* 👈 Cambiado a transparent */
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    display: inline-block;
+    cursor: pointer; /* 👈 Añadido */
+    transition: all 0.2s ease; /* 👈 Añadido */
+}
+.color:hover {
+    transform: scale(1.15);
+}
+.color-input:checked + .color {
+    border-color: #333;
+    box-shadow: 0 0 0 3px #fff, 0 2px 8px rgba(0,0,0,0.2);
+    transform: scale(1.1);
+}
+.color-silver { background: #c0c0c0; }
+.color-black { background: #222; }
+.color-blue { background: #1e3a8a; }
+.color-red { background: #c00; }
+.color-yellow { background: #ffd700; }
+.color-white { 
+    background: #fff; 
+    border: 2px solid #ccc; 
+}
+.color-input:checked + .color-white {
+    border-color: #333;
+}
+.info-btn {
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 154rem;
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: auto;
+    transition: background 0.2s;
+    border: transparent solid 2px;
+}
+.info-btn:hover {
+    border: #000 solid 2px;
+}
+@media (max-width: 1200px) {
+    .hero {
+        flex-direction: column;
+        padding: 1.5rem 1rem;
+        min-height: auto;
+    }
+  }
+@media (max-width: 900px) {
+    .models-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    .hero {
+        flex-direction: column;
+        padding: 1.5rem 1rem;
+        min-height: auto;
+    }
+    .hero-image {
+        width: 100%;
+        height: 180px;
+        margin-top: 1rem;
+    }
+    .carousel-card {
+        width: 380px;
+    }
+  }
+@media (max-width: 600px) {
+    .logo {
+        margin-right: 0;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.5rem 0.5rem;
+    }
+    .nav-links {
+        gap: 1rem;
+        justify-content: center;
+    }
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    .hero {
+        justify-content: center;
+        align-items: center;
+        min-height: auto;
+    }
+    .nav-icons {
+        gap: 0.5rem;
+        justify-content: center;
+    }
+    .models-section {
+        padding: 1rem 0.5rem;
+    }
+    .model-card {
+        padding: 1rem 0.5rem;
+    }
+}
+.dealer-section {
+    background: #f5f5f5;
+    padding: 3rem 2rem 0;
+}
+.dealer-section h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+}
+.dealer-section p {
+    font-size: 1.1rem;
+    color: #333;
+    max-width: 600px;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    border-radius: 0;
+    overflow: hidden;
+    margin-bottom: 3rem;
+}
+.map-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.map-overlay {
+    position: absolute;
+    top: 50%;
+    left: 3rem;
+    transform: translateY(-50%);
+    background: rgba(80, 80, 95, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem 2rem;
+    border-radius: 0.5rem;
+    max-width: 350px;
+}
+
+.map-overlay h2 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+}
+
+.map-overlay button {
+    background: #fff;
+    color: #1a1a1a;
+    border: none;
+    padding: 0.9rem 2rem;
+    border-radius: 2rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 400;
+}
+
+.map-overlay button:hover {
+    background: #e8e8e8;
+    transform: translateY(-2px);
+}
+.carousel-section {
+    padding: 0 0 3rem;
+    overflow: hidden;
+}
+.carousel-container {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 0 2rem 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f0f0f0;
+}
+
+.carousel-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.carousel-container::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.carousel-card {
+    min-width: 380px;
+    max-width: 800px;
+    background: #d9d9d9;
+    border-radius: 0.5rem;  
+    padding: 2rem 1.5rem;
+    flex-shrink: 0;
+}
+
+.carousel-card h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+}
+
+.carousel-card-image {
+    width: 100%;
+    height: 80%;
+    background: #b8b8b8;
+    border-radius: 0.3rem;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.carousel-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-card button {
+    background: #fff;
+    color: #1a1a1a;
+    border: 1px solid transparent;
+    padding: 0.8rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.carousel-card button:hover {
+    border-color: #000;
+}
+
+@media (max-width: 768px) {
+    .dealer-section h1 {
+        font-size: 2.5rem;
+    }
+    .map-container {
+        height: 400px;
+    }
+    .map-overlay {
+        left: 1rem;
+        right: 1rem;
+        max-width: calc(100% - 2rem);
+    }
+}
