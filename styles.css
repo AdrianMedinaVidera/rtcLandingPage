@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +9,6 @@
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
-    background: #ededed;
     color: #222;
 }
 .main-header {
@@ -65,6 +67,11 @@ body {
     height: 24px;
     display: inline-block;
 }
+.burger {
+    width: 24px;
+    height: 24px;
+    display: none !important;
+}
 .hero {
     background-image: url(assets/mercedes-benz_l.webp);
     position: relative;
@@ -99,16 +106,14 @@ body {
     height: 100%;
     border-radius: 1rem;
 }
-.models-section {
-    padding: 2rem 1rem;
-}
 
 .models-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
+    margin-top: 5%;
 }
 
 .model-card {
@@ -119,6 +124,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .model-card h2 {
@@ -216,67 +223,8 @@ body {
 .info-btn:hover {
     border: #000 solid 2px;
 }
-@media (max-width: 1200px) {
-    .hero {
-        flex-direction: column;
-        padding: 1.5rem 1rem;
-        min-height: auto;
-    }
-  }
-@media (max-width: 900px) {
-    .models-grid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-    .hero {
-        flex-direction: column;
-        padding: 1.5rem 1rem;
-        min-height: auto;
-    }
-    .hero-image {
-        width: 100%;
-        height: 180px;
-        margin-top: 1rem;
-    }
-    .carousel-card {
-        width: 380px;
-    }
-  }
-@media (max-width: 600px) {
-    .logo {
-        margin-right: 0;
-    }
-    .navbar {
-        flex-direction: column;
-        gap: 0.5rem;
-        padding: 0.5rem 0.5rem;
-    }
-    .nav-links {
-        gap: 1rem;
-        justify-content: center;
-    }
-    .hero-text h1 {
-        font-size: 2rem;
-    }
-    .hero {
-        justify-content: center;
-        align-items: center;
-        min-height: auto;
-    }
-    .nav-icons {
-        gap: 0.5rem;
-        justify-content: center;
-    }
-    .models-section {
-        padding: 1rem 0.5rem;
-    }
-    .model-card {
-        padding: 1rem 0.5rem;
-    }
-}
 .dealer-section {
-    background: #f5f5f5;
-    padding: 3rem 2rem 0;
+    background: #fff;
 }
 .dealer-section h1 {
     font-size: 3.5rem;
@@ -291,6 +239,10 @@ body {
     max-width: 600px;
     line-height: 1.6;
     margin-bottom: 2rem;
+}
+.dealer-content {
+    padding-top: 5%;
+    padding-left: 5%;
 }
 .map-container {
     position: relative;
@@ -348,48 +300,43 @@ body {
 }
 .carousel-container {
     display: flex;
-    gap: 1.5rem;
+    gap: 4rem;
     overflow-x: auto;
     scroll-behavior: smooth;
     padding: 0 2rem 1rem;
     scrollbar-width: thin;
     scrollbar-color: #888 #f0f0f0;
 }
-
 .carousel-container::-webkit-scrollbar {
     height: 8px;
 }
-
 .carousel-container::-webkit-scrollbar-track {
     background: #f0f0f0;
     border-radius: 10px;
 }
-
 .carousel-container::-webkit-scrollbar-thumb {
     background: #888;
     border-radius: 10px;
 }
-
 .carousel-container::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
-
 .carousel-card {
     min-width: 380px;
-    max-width: 800px;
+    max-width: 600px;
     background: #d9d9d9;
     border-radius: 0.5rem;  
     padding: 2rem 1.5rem;
     flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
 }
-
 .carousel-card h3 {
     font-size: 1.5rem;
     font-weight: 400;
     color: #1a1a1a;
     margin-bottom: 1.5rem;
 }
-
 .carousel-card-image {
     width: 100%;
     height: 80%;
@@ -398,13 +345,11 @@ body {
     margin-bottom: 1.5rem;
     overflow: hidden;
 }
-
 .carousel-card-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
 .carousel-card button {
     background: #fff;
     color: #1a1a1a;
@@ -415,11 +360,324 @@ body {
     cursor: pointer;
     transition: all 0.2s ease;
 }
-
 .carousel-card button:hover {
     border-color: #000;
 }
+.red_car-section {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    overflow: hidden;
+}
+.red_car-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.red_car-content {
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: white;
+    max-width: 400px;
+}
+.red_car-content h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+.red_car-content p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    font-weight: 300;
+}
+.wheel-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 500px;
+    background: #fff;
+    margin: 5rem 0rem;
+}
+.wheel-content {
+    padding: 5rem 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.wheel-content h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    line-height: 1.3;
+    color: #1a1a1a;
+    width: 55%;
 
+}
+.wheel-content p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    width: 55%;
+}
+
+.wheel-content a {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 400;
+    display: inline-block;
+    padding-bottom: 2px;
+}
+
+.wheel-image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.wheel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cta-section {
+    background: #3a3a3a;
+    padding: 3rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cta-text {
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+    max-width: 600px;
+}
+
+.cta-button {
+    background: white;
+    color: #1a1a1a;
+    padding: 0.9rem 2.5rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.newsletter-section {
+    background: #000;
+    color: white;
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.newsletter-section h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.newsletter-section p {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+}
+
+.newsletter-input {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    border: 1px solid white;
+    border-radius: 30px 0 0 30px;
+    background: transparent;
+    color: white;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.newsletter-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter-submit {
+    padding: 1rem 2rem;
+    background: white;
+    color: black;
+    border: 1px solid white;
+    border-radius: 0 30px 30px 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.newsletter-submit:hover {
+    background: #f0f0f0;
+}
+
+.privacy-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    margin-bottom: 2rem;
+}
+
+.privacy-checkbox input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.privacy-checkbox a {
+    color: white;
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.3rem;
+    transition: opacity 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    opacity: 0.7;
+}
+
+.footer {
+    background: #000;
+    color: white;
+    padding: 3rem 5% 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-column h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-column a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: white;
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.scroll-top:hover {
+    transform: translateY(-5px);
+}
+.scroll_up-container {
+    position: sticky;
+    bottom: 2rem;
+    right: 2rem;
+    justify-content: end;
+    display: flex;
+}
+.scroll_up-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    width: 5rem;
+    height: 5rem;
+    padding: 1rem;
+    background-color: #fff;
+}
+@media (max-width: 1200px) {
+    .hero {
+        flex-direction: column;
+        padding: 1.5rem 1rem;
+        min-height: auto;
+    }
+  }
+@media (max-width: 900px) {
+    .models-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    .hero {
+        flex-direction: column;
+        padding: 1.5rem 1rem;
+        min-height: auto;
+    }
+    .hero-image {
+        width: 100%;
+        height: 180px;
+        margin-top: 1rem;
+    }
+    .carousel-card {
+        min-width: 600px;
+        max-width: 100%;
+    }
+}
 @media (max-width: 768px) {
     .dealer-section h1 {
         font-size: 2.5rem;
@@ -432,4 +690,80 @@ body {
         right: 1rem;
         max-width: calc(100% - 2rem);
     }
+    .carousel-card {
+        min-width: 10px;
+    }
+    .wheel-section {
+        grid-template-columns: 1fr;
+    }
+
+    .wheel-content {
+        padding: 3rem 5%;
+    }
+
+    .cta-section {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-input,
+    .newsletter-submit {
+        border-radius: 25px;
+        width: 100%;
+    }
+    .newsletter-input {
+        margin-bottom: 5%;
+    }
+}
+@media (max-width: 600px) {
+    .logo {
+        margin-right: 0;
+    }
+    .navbar {
+        flex-direction: row;
+        gap: 0.5rem;
+        padding: 0.5rem 0.5rem;
+    }
+    .nav-links {
+        display: none !important;
+    }
+    .burger {
+        display: inline-block !important;
+    }
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    .hero {
+        justify-content: center;
+        align-items: center;
+        min-height: auto;
+    }
+    .nav-icons {
+        padding-right: 5%;
+        gap: 10%;
+        justify-content: end;
+        width: 100%;
+    }
+    .model-card {
+        padding: 1rem 0.5rem;
+    }
+    .info-btn {
+        padding: 0.8rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
 }

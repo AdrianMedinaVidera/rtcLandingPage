@@ -8,6 +8,7 @@
 </head>
 <body>
   <header class="main-header">
+    <a id="top"></a>
     <nav class="navbar">
       <div class="logo">
         <img src="assets/logo_mercedes.webp" alt="logo_mercedes">
@@ -21,6 +22,7 @@
       <div class="nav-icons">
         <img src="assets/user_icon.webp" alt="user_icon" class="icon-user">
         <img src="assets/cart_icon.webp" alt="user_icon" class="icon-cart">
+        <img src="assets/burger.png" alt="burger" class="burger">
       </div>
     </nav>
     <div class="hero">
@@ -118,8 +120,10 @@
         </section>
       </div>
       <section class="dealer-section">
-        <h1>Find your nearest<br>Mercedes dealer you.</h1>
-        <p>Browse over 1000 dealers worldwide, and find the one that best suits your situation.</p>
+        <div class="dealer-content">
+          <h1>Find your nearest<br>Mercedes dealer you.</h1>
+          <p>Browse over 1000 dealers worldwide, and find the one that best suits your situation.</p>
+        </div>
         <div class="map-container">
             <img src="assets/mapa.png" alt="Map" class="map-image">
             <div class="map-overlay">
@@ -129,30 +133,114 @@
         </div>
     </section>
     <section class="carousel-section">
-        <div class="carousel-container">
-            <div class="carousel-card">
-                <h3>Comfort</h3>
-                <div class="carousel-card-image">
-                    <img src="assets/1.jpg" alt="Comfort">
-                </div>
-                <button>More info</button>
-            </div>
-            <div class="carousel-card">
-                <h3>Technology</h3>
-                <div class="carousel-card-image">
-                    <img src="assets/foto2.png" alt="Technology">
-                </div>
-                <button>More info</button>
-            </div>
-            <div class="carousel-card">
-                <h3>Accesories</h3>
-                <div class="carousel-card-image">
-                    <img src="assets/3.jpg" alt="Accesories">
-                </div>
-                <button>More info</button>
-            </div>
+      <div class="carousel-container">
+          <div class="carousel-card">
+              <h3>Comfort</h3>
+              <div class="carousel-card-image">
+                  <img src="assets/1.jpg" alt="Comfort">
+              </div>
+              <button>More info</button>
+          </div>
+          <div class="carousel-card">
+              <h3>Technology</h3>
+              <div class="carousel-card-image">
+                  <img src="assets/foto2.png" alt="Technology">
+              </div>
+              <button>More info</button>
+          </div>
+          <div class="carousel-card">
+              <h3>Accesories</h3>
+              <div class="carousel-card-image">
+                  <img src="assets/3.jpg" alt="Accesories">
+              </div>
+              <button>More info</button>
+          </div>
+      </div>
+    </section>
+    <section class="red_car-section">
+        <img src="assets/red_car.png" alt="Mercedes-Maybach" class="red_car-image">
+        <div class="red_car-content">
+            <h1>Red as tentation</h1>
+            <p>Good design is what drives us, and we're proud to share that Mercedes-Maybach has already won the prestigious Red Dot Design Award 2023, bestowed by the world's top product designers.</p>
+        </div>
+    </section>
+    <section class="wheel-section">
+        <div class="wheel-content">
+            <h2>The Mercedes-Maybach wheel programme</h2>
+            <p>The exclusive Mercedes-Maybach wheel programme, e.g. with optional 53.3 cm (21") Maybach forged wheels in multi-spoke design.</p>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="wheel-image-container">
+            <img src="assets/wheel_image.png" alt="Mercedes-Maybach Wheel" class="wheel-image">
+        </div>
+    </section>
+    <section class="cta-section">
+      <p class="cta-text">Ready to own the car of your dreams? Mercedes-Maybach are now available in showrooms at our dealers by appointment only.</p>
+      <button class="cta-button">Contact Now</button>
+    </section>
+    <section class="newsletter-section">
+        <h2>Join the power.</h2>
+        <p>Sign up for our newsletter.</p>
+        <div class="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="Enter your email address here">
+          <button class="newsletter-submit">Subscribe</button>
+        </div>
+        <div class="privacy-checkbox">
+          <input type="checkbox" id="privacy">
+          <label for="privacy">By signing up, I agree to the <a href="#">privacy policy</a> of Veloretti.</label>
+        </div>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="YouTube">▶</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="TikTok">♪</a>
         </div>
     </section>
   </main>
+  <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-column">
+          <h3>Explorer</h3>
+          <ul>
+              <li><a href="#">Electric bikes</a></li>
+              <li><a href="#">City bikes</a></li>
+              <li><a href="#">Kids' bikes</a></li>
+              <li><a href="#">Accessories</a></li>
+              <li><a href="#">Outlet</a></li>
+              <li><a href="#">Business</a></li>
+              <li><a href="#">Insurance Electric</a></li>
+              <li><a href="#">Size guide</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>About</h3>
+          <ul>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Journal</a></li>
+              <li><a href="#">Reviews</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Jobs</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Help</h3>
+          <ul>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Delivery</a></li>
+              <li><a href="#">Assembly & manuals</a></li>
+              <li><a href="#">Payment options</a></li>
+              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#">Terms & conditions</a></li>
+          </ul>
+        </div>
+    </div>
+    <div class="scroll_up-container">
+      <a href="#top" class="scroll_up-button">
+        <img src="assets/Vector.png" alt="scroll_up">
+      </a>
+    </div>
+  </footer>
 </body>
 </html>
